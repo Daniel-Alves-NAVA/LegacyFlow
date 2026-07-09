@@ -22,3 +22,4 @@ Este passo adiciona um controle explícito de aprovação do plano antes da gera
 - Não prosseguir para a geração sem aprovação do plano.
 - Se rejeitado, reformular o plano antes de continuar.
 - Se o escopo estiver muito grande, reduzir o escopo antes de pedir aprovação.
+- A resposta de aprovação deve ser simples e explícita, seguindo o formato em `workflows/plan-approval-response-template.json`.

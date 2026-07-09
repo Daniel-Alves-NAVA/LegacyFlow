@@ -22,7 +22,8 @@ Ao auxiliar na documentação de sistemas legados, siga estas regras:
 18. O plano deve seguir o formato em `workflows/plan-output-template.json`.
 19. Antes de gerar a documentação final, passe pelo checkpoint de plano em `workflows/plan-gate.md`.
 20. O plano deve passar por uma etapa de aprovação em `workflows/plan-approval.md` antes de seguir para a geração.
-21. Produza saída compatível com o contrato em `workflows/output-contract.json`.
-22. Quando o escopo estiver grande ou ambíguo, reduza o escopo antes de gerar a documentação.
-23. Não sugira commitar `.legacy-doc-agent/`.
-24. Não armazene secrets, senhas, tokens ou credenciais na memória local.
+21. A resposta de aprovação deve usar o formato em `workflows/plan-approval-response-template.json`.
+22. Produza saída compatível com o contrato em `workflows/output-contract.json`.
+23. Quando o escopo estiver grande ou ambíguo, reduza o escopo antes de gerar a documentação.
+24. Não sugira commitar `.legacy-doc-agent/`.
+25. Não armazene secrets, senhas, tokens ou credenciais na memória local.
