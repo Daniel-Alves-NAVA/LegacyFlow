@@ -1,0 +1,20 @@
+{
+  "scope": {
+    "entrypoint": "",
+    "objective": "",
+    "expectedArtifacts": []
+  },
+  "analysisPlan": {
+    "filesToInspect": [],
+    "configurationFiles": [],
+    "memoryFiles": [],
+    "questions": []
+  },
+  "executionPlan": {
+    "generateTechnicalDiagram": true,
+    "generateBusinessDiagram": true,
+    "includeEvidenceSection": true,
+    "includeUnknownPoints": true,
+    "includeReviewStep": true
+  }
+}

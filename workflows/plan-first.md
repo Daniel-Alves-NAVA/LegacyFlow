@@ -19,4 +19,5 @@ Este fluxo adiciona uma etapa explícita de planejamento antes da geração da d
 
 - Se o escopo estiver muito amplo, reduzir antes de gerar.
 - Se faltar evidência, registrar a limitação explicitamente.
+- O plano deve ser entregue em formato estruturado, usando o template em `workflows/plan-output-template.json`.
 - Não passar para a geração sem um plano mínimo.
