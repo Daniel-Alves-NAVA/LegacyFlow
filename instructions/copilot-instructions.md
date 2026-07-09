@@ -17,5 +17,8 @@ Ao auxiliar na documentação de sistemas legados, siga estas regras:
 13. Use memória local apenas como apoio.
 14. A fonte final de verdade é o código.
 15. Quando houver uma etapa de revisão, use o agente de revisão para validar a saída do agente de geração.
-16. Não sugira commitar `.legacy-doc-agent/`.
-17. Não armazene secrets, senhas, tokens ou credenciais na memória local.
+16. Siga o fluxo de orquestração descrito em `workflows/README.md` sempre que possível.
+17. Produza saída compatível com o contrato em `workflows/output-contract.json`.
+18. Quando o escopo estiver grande ou ambíguo, reduza o escopo antes de gerar a documentação.
+19. Não sugira commitar `.legacy-doc-agent/`.
+20. Não armazene secrets, senhas, tokens ou credenciais na memória local.

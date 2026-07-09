@@ -79,6 +79,16 @@ Para facilitar o uso no chat do Copilot, este repositório também disponibiliza
 
 Use esses comandos no chat do Copilot, preferencialmente com o código relevante aberto no editor.
 
+## Engenharia do Harness
+
+Para evoluir o harness de forma mais consistente, este repositório agora considera:
+
+- um fluxo de orquestração em [workflows/README.md](workflows/README.md);
+- um contrato de saída padronizado em [workflows/output-contract.json](workflows/output-contract.json);
+- fixtures de avaliação em [fixtures/README.md](fixtures/README.md).
+
+Esses artefatos ajudam a tornar a geração e a revisão mais previsíveis, auditáveis e fáceis de evoluir.
+
 ## Boas Práticas
 
 - Documente um fluxo por vez.

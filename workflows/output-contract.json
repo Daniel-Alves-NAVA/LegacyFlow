@@ -1,0 +1,22 @@
+{
+  "documentTitle": "",
+  "entrypoint": {
+    "className": "",
+    "methodName": "",
+    "type": ""
+  },
+  "summary": "",
+  "technicalDiagram": "",
+  "businessDiagram": "",
+  "evidence": [],
+  "dependencies": {
+    "internal": [],
+    "external": []
+  },
+  "events": [],
+  "endpoints": [],
+  "persistence": [],
+  "unknownPoints": [],
+  "reviewStatus": "pending",
+  "confidence": "low"
+}
