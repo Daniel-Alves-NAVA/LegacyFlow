@@ -6,13 +6,15 @@ Este fluxo define a sequência recomendada para o harness de documentação lega
 
 1. Scope definition
    - identificar o entrypoint e o escopo da documentação.
-2. Context gathering
+2. Plan first
+   - criar um plano mínimo de análise antes de gerar a documentação.
+3. Context gathering
    - coletar arquivos relevantes, configuração e memória local.
-3. Draft generation
+4. Draft generation
    - gerar a documentação inicial com o agente de geração.
-4. Review
+5. Review
    - revisar a saída com o agente de revisão.
-5. Finalization
+6. Finalization
    - consolidar a documentação final e salvar o resultado.
 
 ## Regras
