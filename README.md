@@ -1,101 +1,120 @@
 # Legacy Doc Kit
 
-Legacy Documentation Kit for Copilot.
+Kit de documentação para sistemas legados, pensado para funcionar com GitHub Copilot de forma mais consistente, rastreável e alinhada ao código.
 
-Este repositório contém agents, skills, prompts, templates, instructions e language profiles para auxiliar na documentação de sistemas legados usando GitHub Copilot.
+## O que é este projeto
 
-## Objetivo
+Este repositório reúne:
 
-Padronizar a geração de documentação técnica e de negócio a partir do código-fonte, usando Markdown e Mermaid.
+- agentes especializados para gerar documentação técnica e de negócio;
+- skills reutilizáveis para análise de fluxos Java/Spring;
+- prompts, templates e instruções para padronizar a saída;
+- um fluxo de revisão que ajuda a reduzir alucinações e melhorar a qualidade.
+
+O objetivo é transformar código legado em documentação útil, com evidências claras e diagramas em Mermaid.
+
+## Por que usar
+
+- acelera a documentação de fluxos complexos;
+- reduz retrabalho e inconsistência entre pessoas;
+- melhora a rastreabilidade entre código e documentação;
+- facilita a compreensão de sistemas legados por novos integrantes.
 
 ## Instalação
+
+Na raiz do projeto, execute:
 
 ```bash
 ./gradlew installGuidelines
 ```
 
-Diretório padrão:
+O diretório padrão de instalação é:
 
+```text
 ~/.company/copilot-guidelines
+```
 
-Para alterar:
+Para definir outro destino:
 
 ```bash
 ./gradlew installGuidelines -PcopilotGuidelinesDir=/caminho/customizado
 ```
 
-## Uso no Copilot
+## Uso rápido no Copilot
 
-Exemplo:
+Após instalar, use o Copilot com prompts como:
 
-Use o legacy-documentation-agent e a skill document-java-spring-flow para documentar o fluxo iniciado por esta classe.
+```text
+Documente este fluxo seguindo as guidelines do Legacy Doc Kit.
+```
 
-Para revisão, use o legacy-documentation-reviewer-agent com a skill review-generated-doc.
+Ou, se quiser uma abordagem mais estruturada:
 
-Ou:
+```text
+Use o agente legacy-documentation-agent para documentar este listener e depois revise com o legacy-documentation-reviewer-agent.
+```
 
-Documente esse listener seguindo as guidelines corporativas de documentação legado.
+## Agentes disponíveis
 
-## Agentes Disponíveis
+- legacy-documentation-agent: gera documentação técnica e de negócio a partir do código.
+- legacy-documentation-reviewer-agent: revisa a documentação, valida evidências e aponta riscos de alucinação.
 
-- legacy-documentation-agent — gera documentação técnica e de negócio para fluxos legados.
-- legacy-documentation-reviewer-agent — revisa documentação gerada, valida evidências e aponta problemas.
+## Skills principais
 
-## Skills Disponíveis
+- document-java-spring-flow
+- document-sequence-flow
+- document-business-flow
+- review-generated-doc
+- estimate-doc-token-cost
+- maintain-project-doc-context
+- backup-local-doc-memory
 
-| Skill | Objetivo |
-|---|---|
-| document-java-spring-flow | Documenta fluxos Java/Spring considerando código e configurações |
-| document-sequence-flow | Gera documentação técnica com Mermaid sequenceDiagram |
-| document-business-flow | Gera fluxo de negócio com Mermaid flowchart |
-| review-generated-doc | Revisa documentação gerada |
-| estimate-doc-token-cost | Estima tamanho/custo do contexto |
-| maintain-project-doc-context | Mantém memória local do projeto |
-| backup-local-doc-memory | Auxilia backup e restauração da memória local |
+## Memória local
 
-## Memória Local
-
-Este projeto prevê uma memória local criada dentro do repositório analisado:
-
-.legacy-doc-agent/
-
-Essa pasta deve ficar fora do Git.
-
-Adicione ao .gitignore do projeto analisado:
+O projeto pode usar uma memória local por repositório, armazenada em:
 
 ```text
 .legacy-doc-agent/
 ```
 
-## Comandos Slash para o Copilot
+Essa pasta deve ficar fora do controle de versão. No projeto analisado, recomenda-se adicionar ao .gitignore:
 
-Para facilitar o uso no chat do Copilot, este repositório também disponibiliza comandos curtos baseados em `/`:
+```text
+.legacy-doc-agent/
+```
 
-- `/generate-legacy-flow` — gera documentação para um fluxo legado.
-- `/review-legacy-doc` — revisa a documentação gerada.
-- `/estimate-context-cost` — estima custo de contexto e tokens.
-- `/update-local-memory` — atualiza a memória local do projeto.
-- `/backup-local-memory` — cria backup da memória local.
+## Fluxo recomendado
 
-Use esses comandos no chat do Copilot, preferencialmente com o código relevante aberto no editor.
+1. Abra os arquivos relevantes no editor.
+2. Selecione o fluxo que deseja documentar.
+3. Gere a documentação com o agente apropriado.
+4. Revise a saída antes de considerar finalizada.
+5. Atualize a memória local se houver contexto importante.
+6. Faça backup da memória ao trocar de máquina ou compartilhar contexto.
 
-## Engenharia do Harness
+## Comandos slash
 
-Para evoluir o harness de forma mais consistente, este repositório agora considera:
+Os comandos abaixo podem ajudar no uso diário no chat do Copilot:
 
-- um fluxo de orquestração em [workflows/README.md](workflows/README.md);
-- um contrato de saída padronizado em [workflows/output-contract.json](workflows/output-contract.json);
-- fixtures de avaliação em [fixtures/README.md](fixtures/README.md).
+- /generate-legacy-flow
+- /review-legacy-doc
+- /estimate-context-cost
+- /update-local-memory
+- /backup-local-memory
 
-Esses artefatos ajudam a tornar a geração e a revisão mais previsíveis, auditáveis e fáceis de evoluir.
+## Estrutura do repositório
 
-## Boas Práticas
+- agents: definição dos agentes.
+- skills: capacidades reutilizáveis.
+- prompts: instruções prontas para uso.
+- templates: modelos de saída em Markdown.
+- workflows: fluxo de orquestração e gates de revisão.
+- fixtures: exemplos e cenários de validação.
 
-- Documente um fluxo por vez.
-- Abra no IDE os arquivos relacionados ao fluxo.
-- Não peça para documentar o repositório inteiro.
-- Revise sempre a documentação antes de commitar.
-- Confirme tópicos, filas, endpoints e clients externos.
-- Use a skill de revisão antes de finalizar.
-- Use memória local para reduzir contexto.
-- Faça backup da memória local quando trocar de máquina.
+## Boas práticas
+
+- documente um fluxo por vez;
+- use evidências do código, não suposições;
+- revise sempre a saída antes de compartilhar;
+- mantenha o contexto local sempre organizado;
+- prefira explicações objetivas e rastreáveis.
