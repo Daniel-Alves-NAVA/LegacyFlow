@@ -10,11 +10,13 @@ Este fluxo define a sequência recomendada para o harness de documentação lega
    - criar um plano mínimo de análise antes de gerar a documentação.
 3. Context gathering
    - coletar arquivos relevantes, configuração e memória local.
-4. Draft generation
+4. Plan gate
+   - validar se o plano mínimo atende às condições do checkpoint.
+5. Draft generation
    - gerar a documentação inicial com o agente de geração.
-5. Review
+6. Review
    - revisar a saída com o agente de revisão.
-6. Finalization
+7. Finalization
    - consolidar a documentação final e salvar o resultado.
 
 ## Regras

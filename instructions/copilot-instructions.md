@@ -20,7 +20,8 @@ Ao auxiliar na documentação de sistemas legados, siga estas regras:
 16. Siga o fluxo de orquestração descrito em `workflows/README.md` sempre que possível.
 17. Antes de gerar a documentação final, produza um plano mínimo de análise conforme `workflows/plan-first.md`.
 18. O plano deve seguir o formato em `workflows/plan-output-template.json`.
-19. Produza saída compatível com o contrato em `workflows/output-contract.json`.
-20. Quando o escopo estiver grande ou ambíguo, reduza o escopo antes de gerar a documentação.
-21. Não sugira commitar `.legacy-doc-agent/`.
-22. Não armazene secrets, senhas, tokens ou credenciais na memória local.
+19. Antes de gerar a documentação final, passe pelo checkpoint de plano em `workflows/plan-gate.md`.
+20. Produza saída compatível com o contrato em `workflows/output-contract.json`.
+21. Quando o escopo estiver grande ou ambíguo, reduza o escopo antes de gerar a documentação.
+22. Não sugira commitar `.legacy-doc-agent/`.
+23. Não armazene secrets, senhas, tokens ou credenciais na memória local.
