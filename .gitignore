@@ -1,0 +1,4 @@
+# Local AI documentation memory/cache
+
+.legacy-doc-agent/
+.gradle/

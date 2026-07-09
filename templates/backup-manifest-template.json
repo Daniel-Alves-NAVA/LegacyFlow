@@ -1,0 +1,13 @@
+{
+  "projectName": "",
+  "createdAt": "",
+  "legacyDocKitVersion": "1.0.0",
+  "sourcePath": ".legacy-doc-agent",
+  "containsSecrets": false,
+  "includedFolders": [
+    "memory",
+    "summaries",
+    "runs"
+  ],
+  "notes": []
+}
