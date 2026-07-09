@@ -60,6 +60,18 @@ Adicione ao .gitignore do projeto analisado:
 .legacy-doc-agent/
 ```
 
+## Comandos Slash para o Copilot
+
+Para facilitar o uso no chat do Copilot, este repositório também disponibiliza comandos curtos baseados em `/`:
+
+- `/generate-legacy-flow` — gera documentação para um fluxo legado.
+- `/review-legacy-doc` — revisa a documentação gerada.
+- `/estimate-context-cost` — estima custo de contexto e tokens.
+- `/update-local-memory` — atualiza a memória local do projeto.
+- `/backup-local-memory` — cria backup da memória local.
+
+Use esses comandos no chat do Copilot, preferencialmente com o código relevante aberto no editor.
+
 ## Boas Práticas
 
 - Documente um fluxo por vez.
