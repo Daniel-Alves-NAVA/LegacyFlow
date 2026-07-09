@@ -16,5 +16,6 @@ Ao auxiliar na documentação de sistemas legados, siga estas regras:
 12. Sempre inclua seção de pontos não identificados.
 13. Use memória local apenas como apoio.
 14. A fonte final de verdade é o código.
-15. Não sugira commitar `.legacy-doc-agent/`.
-16. Não armazene secrets, senhas, tokens ou credenciais na memória local.
+15. Quando houver uma etapa de revisão, use o agente de revisão para validar a saída do agente de geração.
+16. Não sugira commitar `.legacy-doc-agent/`.
+17. Não armazene secrets, senhas, tokens ou credenciais na memória local.

@@ -30,9 +30,16 @@ Exemplo:
 
 Use o legacy-documentation-agent e a skill document-java-spring-flow para documentar o fluxo iniciado por esta classe.
 
+Para revisão, use o legacy-documentation-reviewer-agent com a skill review-generated-doc.
+
 Ou:
 
 Documente esse listener seguindo as guidelines corporativas de documentação legado.
+
+## Agentes Disponíveis
+
+- legacy-documentation-agent — gera documentação técnica e de negócio para fluxos legados.
+- legacy-documentation-reviewer-agent — revisa documentação gerada, valida evidências e aponta problemas.
 
 ## Skills Disponíveis
 
